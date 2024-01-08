@@ -25,7 +25,7 @@ class _UserScreenState extends State<UserScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Daftar User'),
+        title: Text('Product'),
       ),
       body: ListView.builder(
           itemCount: userList.length,

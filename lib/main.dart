@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_7/DaftarMotor.dart';
 import 'package:flutter_application_7/FoodListScreen.dart';
 import 'package:flutter_application_7/HistoryScreen.dart';
-import 'package:flutter_application_7/ListProduk.dart';
+import 'package:flutter_application_7/productlist.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -40,7 +40,7 @@ class MainApp extends StatelessWidget {
                   leading: Icon(Icons.list),
                   onTap: () {
                     Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => UserScreen()));
+                        MaterialPageRoute(builder: (context) =>ProductListScreen()));
                   },
                 ),
                 ListTile(
@@ -48,7 +48,7 @@ class MainApp extends StatelessWidget {
                   leading: Icon(Icons.shopping_bag),
                   onTap: () {
                     Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => UserScreen()));
+                        MaterialPageRoute(builder: (context) => ProductListScreen()));
                   },
                 ),
                 ListTile(
