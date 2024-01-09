@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_7/DaftarMotor.dart';
+import 'package:flutter_application_7/History.dart';
 import 'package:flutter_application_7/Login.dart';
 import 'package:flutter_application_7/HistoryScreen.dart';
+import 'package:flutter_application_7/Cart.dart';
 import 'package:flutter_application_7/productlist.dart';
 
 void main() {
@@ -39,8 +41,10 @@ class MainApp extends StatelessWidget {
                   title: Text('List Produk'),
                   leading: Icon(Icons.list),
                   onTap: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) =>ProductListScreen()));
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => ProductListScreen()));
                   },
                 ),
                 ListTile(
@@ -48,37 +52,31 @@ class MainApp extends StatelessWidget {
                   leading: Icon(Icons.shopping_bag),
                   onTap: () {
                     Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => ProductListScreen()));
+                        MaterialPageRoute(builder: (context) => Cart()));
                   },
                 ),
                 ListTile(
                   title: Text('Order'),
                   leading: Icon(Icons.shopping_cart_checkout),
                   onTap: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => Login()));
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => Login()));
                   },
                 ),
                 ListTile(
                   title: Text('Account'),
                   leading: Icon(Icons.person),
                   onTap: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => Login()));
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => Login()));
                   },
                 ),
                 ListTile(
                   title: Text('History'),
                   leading: Icon(Icons.history),
                   onTap: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => HistoryScreen()));
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => History()));
                   },
                 ),
               ],

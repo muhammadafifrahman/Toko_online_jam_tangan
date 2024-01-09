@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_7/Cart.dart';
 import 'package:flutter_application_7/model/productitem.dart';
 
-class ProductListScreen extends StatefulWidget {
-  const ProductListScreen({super.key});
+class History extends StatefulWidget {
+  const History({super.key});
 
   @override
-  State<ProductListScreen> createState() => __ProductListScreenState();
+  State<History> createState() => _History();
 }
 
-class __ProductListScreenState extends State<ProductListScreen> {
+class _History extends State<History> {
   List productList = [
     ProductItem(
       harga: "Rp. 780.000",
@@ -59,7 +59,7 @@ class __ProductListScreenState extends State<ProductListScreen> {
     return Scaffold(
       appBar: AppBar(
           backgroundColor: Colors.grey,
-          title: Text("Product"),
+          title: Text("History"),
           actions: [
             IconButton(onPressed: () {}, icon: Icon(Icons.camera_alt_outlined)),
             IconButton(
