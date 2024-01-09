@@ -58,7 +58,7 @@ class _History extends State<History> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-          backgroundColor: Colors.grey,
+          backgroundColor: Color.fromARGB(255, 255, 252, 252),
           title: Text("History"),
           actions: [
             IconButton(onPressed: () {}, icon: Icon(Icons.camera_alt_outlined)),
