@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_7/DaftarMotor.dart';
-import 'package:flutter_application_7/FoodListScreen.dart';
+import 'package:flutter_application_7/Login.dart';
 import 'package:flutter_application_7/HistoryScreen.dart';
 import 'package:flutter_application_7/productlist.dart';
 
@@ -58,7 +58,7 @@ class MainApp extends StatelessWidget {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => FoodListScreen()));
+                            builder: (context) => Login()));
                   },
                 ),
                 ListTile(
@@ -68,7 +68,7 @@ class MainApp extends StatelessWidget {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => FoodListScreen()));
+                            builder: (context) => Login()));
                   },
                 ),
                 ListTile(
