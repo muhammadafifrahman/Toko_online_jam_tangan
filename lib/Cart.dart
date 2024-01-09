@@ -58,7 +58,7 @@ class _Cart extends State<Cart> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-          backgroundColor: Colors.grey,
+          backgroundColor: Color.fromARGB(255, 255, 116, 2),
           title: Text("My Cart"),
           actions: [
             IconButton(onPressed: () {}, icon: Icon(Icons.camera_alt_outlined)),
