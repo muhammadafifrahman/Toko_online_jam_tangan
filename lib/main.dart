@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_7/DaftarMotor.dart';
-import 'package:flutter_application_7/History.dart';
 import 'package:flutter_application_7/Login.dart';
 import 'package:flutter_application_7/HistoryScreen.dart';
 import 'package:flutter_application_7/Cart.dart';
+import 'package:flutter_application_7/Order.dart';
 import 'package:flutter_application_7/productlist.dart';
 
 void main() {
@@ -26,7 +25,7 @@ class MainApp extends StatelessWidget {
             child: ListView(
               children: [
                 UserAccountsDrawerHeader(
-                    decoration: BoxDecoration(color: Colors.green),
+                    decoration: BoxDecoration(color: Colors.grey),
                     accountName: Text("Online Watch Shop"),
                     accountEmail: Text("")),
                 ListTile(
@@ -60,7 +59,7 @@ class MainApp extends StatelessWidget {
                   leading: Icon(Icons.shopping_cart_checkout),
                   onTap: () {
                     Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => Login()));
+                        MaterialPageRoute(builder: (context) => Order()));
                   },
                 ),
                 ListTile(
@@ -76,7 +75,7 @@ class MainApp extends StatelessWidget {
                   leading: Icon(Icons.history),
                   onTap: () {
                     Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => History()));
+                        MaterialPageRoute(builder: (context) => HistoryScreen()));
                   },
                 ),
               ],
@@ -84,12 +83,12 @@ class MainApp extends StatelessWidget {
           ),
           floatingActionButton: FloatingActionButton(
             onPressed: () {},
-            backgroundColor: Colors.red,
+            backgroundColor: Colors.grey,
             child: Icon(Icons.refresh),
           ),
           appBar: AppBar(
             title: Text('Online Watch Shop'),
-            backgroundColor: Colors.blue,
+            backgroundColor: Colors.grey,
           ),
           body: SingleChildScrollView(
             child: Column(
@@ -105,31 +104,16 @@ class MainApp extends StatelessWidget {
                         width: 100,
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10),
-                          // color: Colors.red[400],
+                         
                         ),
                       ),
                     ),
-                    SizedBox(width: 10),
-                    InkWell(
-                      onTap: () {
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => DaftarMotor()));
-                      },
-                      child: Container(
-                        height: 100,
-                        width: 100,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(10),
-                          // color: Colors.green[300],
-                        ),
-                      ),
-                    ),
-                    SizedBox(width: 10),
+          
+                     
+                    
                   ],
                 ),
-                SizedBox(height: 10),
+
                 // SLIDER START
                 Text("Advertisement"),
                 Container(

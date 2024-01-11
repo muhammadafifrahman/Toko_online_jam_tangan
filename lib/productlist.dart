@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_7/Cart.dart';
 import 'package:flutter_application_7/model/productitem.dart';
 
 class ProductListScreen extends StatefulWidget {
@@ -70,7 +69,14 @@ class __ProductListScreenState extends State<ProductListScreen> {
       body: ListView.builder(
           itemCount: productList.length,
           itemBuilder: (context, index) {
-            return Card(
+            return InkWell(
+              onTap: () => {
+                setState(() {
+                  productList = productList
+                      .where((element) => element.nama == "DANIEL WELLINGTON Classic Petite Melrose")
+                      .toList();
+                }),
+              },
               child: Row(children: [
                 Image(
                     width: 100,

@@ -8,8 +8,8 @@ import 'package:flutter/material.dart';
     return MaterialApp(
       home: Scaffold(
           appBar: AppBar(
-            title: Text('Wacht'),
-            backgroundColor: const Color.fromARGB(255, 95, 92, 92),
+            title: Text('Watch'),
+            backgroundColor:  Colors.grey,
           ),
           body: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
