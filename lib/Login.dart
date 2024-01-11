@@ -8,7 +8,7 @@ import 'package:flutter/material.dart';
     return MaterialApp(
       home: Scaffold(
           appBar: AppBar(
-            title: Text('Watch'),
+            title: Text('Login'),
             backgroundColor:  Colors.grey,
           ),
           body: Column(
