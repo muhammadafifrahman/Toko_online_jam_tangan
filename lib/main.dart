@@ -74,8 +74,10 @@ class MainApp extends StatelessWidget {
                   title: Text('History'),
                   leading: Icon(Icons.history),
                   onTap: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => HistoryScreen()));
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => HistoryScreen()));
                   },
                 ),
               ],
@@ -104,13 +106,114 @@ class MainApp extends StatelessWidget {
                         width: 100,
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10),
-                         
+                          color: Colors.red[400],
+                        ),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                            Icon(
+                              Icons.shopping_bag,
+                              size: 50,
+                              color: Colors.white,
+                            ),
+                            Text(
+                              'List Produk',
+                              style:
+                                  TextStyle(fontSize: 16, color: Colors.white),
+                            ),
+                          ],
                         ),
                       ),
                     ),
-          
-                     
-                    
+                    SizedBox(width: 10),
+                    InkWell(
+                      onTap: () {
+                        Navigator.push(context,
+                            MaterialPageRoute(builder: (context) => Cart()));
+                      },
+                      child: Container(
+                        height: 100,
+                        width: 100,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10),
+                          color: Colors.green[300],
+                        ),
+                        child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              Icon(
+                                Icons.list,
+                                size: 50,
+                                color: Colors.white,
+                              ),
+                              Text(
+                                'Cart',
+                                style: TextStyle(
+                                    fontSize: 16, color: Colors.white),
+                              ),
+                            ]),
+                      ),
+                    ),
+                    SizedBox(width: 10),
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Container(
+                        height: 100,
+                        width: 100,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10),
+                          color: Colors.blue[300],
+                        ),
+                        child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              Icon(
+                                Icons.shopping_cart_checkout,
+                                size: 50,
+                                color: Colors.white,
+                              ),
+                              Text(
+                                'Order',
+                                style: TextStyle(
+                                    fontSize: 16, color: Colors.white),
+                              ),
+                            ]),
+                      ),
+                    ),
+                  ],
+                ),
+                SizedBox(height: 10),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Container(
+                        height: 100,
+                        width: 100,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10),
+                        ),
+                        // kotak start
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                            Text(
+                              '',
+                              style: TextStyle(
+                                  fontSize: 16,
+                                  color:
+                                      const Color.fromARGB(255, 218, 183, 102)),
+                            ),
+                          ],
+                        ),
+                        // kotak end
+                      ),
+                    ),
                   ],
                 ),
 
