@@ -9,7 +9,7 @@ class Order extends StatefulWidget {
 }
 
 class __OrderState extends State<Order> {
-  List Order =[
+  List Order = [
     OrderItem(
       harga: "Rp. 780.000",
       nama: "DANIEL WELLINGTON Classic Petite Melrose",
@@ -24,26 +24,23 @@ class __OrderState extends State<Order> {
           "https://th.bing.com/th/id/OIP.0OFUFFt6paTCJ6kI1a85-QHaI4?w=160&h=192&c=7&r=0&o=5&pid=1.7",
       quantity: "1",
     ),
-   
-    
   ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-          backgroundColor: Colors.grey,
-          title: Text("My Order"),
-          
-          ),
+        backgroundColor: Colors.grey,
+        title: Text("My Order"),
+      ),
       body: ListView.builder(
           itemCount: Order.length,
           itemBuilder: (context, index) {
             return InkWell(
               onTap: () => {
                 setState(() {
-                  Order = Order
-                      .where((element) => element.nama == "DANIEL WELLINGTON Classic Petite Melrose")
-                      .toList();
+                  Order = Order.where((element) =>
+                      element.nama ==
+                      "DANIEL WELLINGTON Classic Petite Melrose").toList();
                 }),
               },
               child: Row(children: [

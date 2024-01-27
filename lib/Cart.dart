@@ -9,7 +9,7 @@ class Cart extends StatefulWidget {
 }
 
 class __CartState extends State<Cart> {
-  List Cart =[
+  List Cart = [
     CartItem(
       harga: "Rp. 780.000",
       nama: "DANIEL WELLINGTON Classic Petite Melrose",
@@ -24,26 +24,23 @@ class __CartState extends State<Cart> {
           "https://th.bing.com/th/id/OIP.0OFUFFt6paTCJ6kI1a85-QHaI4?w=160&h=192&c=7&r=0&o=5&pid=1.7",
       quantity: "1",
     ),
-   
-    
   ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-          backgroundColor: Colors.grey,
-          title: Text("My Cart"),
-          
-          ),
+        backgroundColor: Colors.grey,
+        title: Text("My Cart"),
+      ),
       body: ListView.builder(
           itemCount: Cart.length,
           itemBuilder: (context, index) {
             return InkWell(
               onTap: () => {
                 setState(() {
-                  Cart = Cart
-                      .where((element) => element.nama == "DANIEL WELLINGTON Classic Petite Melrose")
-                      .toList();
+                  Cart = Cart.where((element) =>
+                      element.nama ==
+                      "DANIEL WELLINGTON Classic Petite Melrose").toList();
                 }),
               },
               child: Row(children: [
@@ -67,4 +64,3 @@ class __CartState extends State<Cart> {
     );
   }
 }
-

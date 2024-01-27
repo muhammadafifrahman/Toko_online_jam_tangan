@@ -73,7 +73,9 @@ class __ProductListScreenState extends State<ProductListScreen> {
               onTap: () => {
                 setState(() {
                   productList = productList
-                      .where((element) => element.nama == "DANIEL WELLINGTON Classic Petite Melrose")
+                      .where((element) =>
+                          element.nama ==
+                          "DANIEL WELLINGTON Classic Petite Melrose")
                       .toList();
                 }),
               },
